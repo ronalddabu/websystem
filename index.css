@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,600;0,700;1,300&display=swap');
+:root{
+    --green: rgb(8, 66, 8);
+    --dark: rgba(0, 22, 0, 0.63);
+    --light-green: rgb(63, 121, 63);
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 6xp;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-decoration-color:#fffafa;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: rgb(255, 241, 241);
+    margin: 0;
+    text-align: initial;
+    align-items: initial;
+    justify-content: initial;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    color:#000000;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding:1rem 1%;
+    box-shadow: 0.2rem 0.2rem rgb(0, 0, 0);
+    display: flex;
+    align-items: inherit;
+    justify-content: space-between;
+    margin: 1rem, 1rem, 1rem;
+}
+header .logo{   
+    color: rgb(240, 114, 69);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+header .logo span{
+    text-decoration: none;
+    color: rgb(44, 44, 141);
+    font-weight: bolder;
+    font-size: 2.8rem;
+}
+header .navbar a{
+    color: #0000009d;
+    font-size: 2.8rem;
+    padding:0 1.9rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+header .navbar a:hover{
+    color: var(--green);
+}
+.img-thumbnail{
+background-image: url(ecst_background.jpg);
+background-size: cover;
+background-position: fixed;
+align-items: center;
+justify-content: center;
+display: block;
+}
+
+.home{
+    min-height: 30vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin-top: .1rem;
+    border: .1rem solid var(--green);
+    border-radius: .1rem;
+}
+.programs{
+    min-height: 50vh;
+    min-width: 50vh;
+    background-color: #fffafa;
+    background-size: cover;
+    background-position: center;
+    align-items: initial;
+    justify-content: center;
+    border: .1rem solid;
+    border-color: var(--green);
+    border-radius: .1rem;
+    text-decoration: none;
+}
