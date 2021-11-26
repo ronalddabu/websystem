@@ -97,4 +97,5 @@ display: block;
     border-color: var(--green);
     border-radius: .1rem;
     text-decoration: none;
+    display: inline;
 }
