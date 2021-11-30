@@ -1,3 +1,45 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+
+
+@import "helpers";
+
+@import "utilities/api";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,600;0,700;1,300&display=swap');
 :root{
     --green: rgb(8, 66, 8);
@@ -41,32 +83,36 @@ header{
     box-shadow: 0.2rem 0.2rem rgb(0, 0, 0);
     display: flex;
     align-items: inherit;
-    justify-content: space-between;
-    margin: 1rem, 1rem, 1rem;
-}
-header .logo{   
-    color: rgb(240, 114, 69);
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-header .logo span{
-    text-decoration: none;
-    color: rgb(44, 44, 141);
-    font-weight: bolder;
-    font-size: 2.8rem;
 }
 header .navbar a{
-    color: #0000009d;
     font-size: 2.8rem;
     padding:0 1.9rem;
     font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
+    margin-top:1rem;
+    margin-left: .5rem;
 }
-header .navbar a:hover{
-    color: var(--green);
+header .logo {
+    margin-top:1rem;
+    font-size: 1.5rem;
+    color: rgb(206, 93, 28);
+    margin-left: .2rem;
+    text-decoration: none;
 }
+header .logo span{
+    margin-top:1rem;
+    color: rgb(15, 26, 119);
+    font-size: 4rem;
+    padding:0 .5rem;
+    margin-left: .2rem;
+    font-weight: bolder;
+}
+header .icons #menu-bars{
+    display: none;
+ }
 .img-thumbnail{
-background-image: url(ecst_background.jpg);
+background-image:url(ecst_background.jpg);
 background-size: cover;
 background-position: fixed;
 align-items: center;
@@ -80,10 +126,10 @@ display: block;
     background-size: cover;
     background-position: fixed;
     align-items: center;
-    justify-content: center;
     margin-top: .1rem;
     border: .1rem solid var(--green);
     border-radius: .1rem;
+    display: flex;
 }
 .programs{
     min-height: 50vh;
@@ -93,9 +139,183 @@ display: block;
     background-position: center;
     align-items: initial;
     justify-content: center;
-    border: .1rem solid;
+    border: .2rem solid;
     border-color: var(--green);
-    border-radius: .1rem;
+    border-radius: .2rem;
     text-decoration: none;
     display: inline;
 }
+.facilities{
+    min-height: 50vh;
+    min-width: 50vh;
+    background-color: #fffafa;
+    background-size: cover;
+    background-position: center;
+    align-items: initial;
+    justify-content: center;
+    border: .2rem solid;
+    border-color: var(--green);
+    border-radius: .2rem;
+    display: inline; 
+}
+.lifeecst{
+    min-height: 60vh;
+    min-width: 60vh;
+    background-size: cover;
+    background-position: center;
+    align-items: initial;
+    justify-content: center;
+    border: .2rem solid;
+    border-color: var(--green);
+    border-radius: .2rem;
+    display: flex;
+}
+
+@media(max-width:1024px){
+    html{
+        font-size: 50%;
+        overflow-x: visible;
+        scroll-padding-top: 2rem;
+    } 
+    
+    header{
+        padding: 1rem .5rem;
+}
+header .icons #menu-bars{
+    display: none;
+ }
+ header .navbar{
+     position: absolute;
+     left: 0;right: 0;top: 100%;
+     background: #fff;
+     border-top: .5rem solid #333;
+     border-bottom: .5rem solid #333;
+     transition: 1s linear;
+ }
+ header .navbar a{
+     display: inline;
+     padding:2rem;
+     margin: 2rem;
+     background: #fff;
+     border: .1px solid #333;
+     box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+     border-radius: .5rem;
+     
+ }
+ .lifeecst{
+     display: block;
+}
+
+@media(max-width:768px){
+    header .navbar{
+        position: absolute;
+        left: 0;right: 0;top: 100%;
+        background: #fff;
+        border-top: .1rem solid #333;
+        border-bottom: .1rem solid #333;
+        transition: 1s linear;
+    }
+    header .navbar a{
+        display: inline;
+        padding:1.5rem;
+        margin: 1.5rem;
+        background: #fff;
+        border: .1px solid #333;
+        box-shadow:0 .5rem .5rem rgba(0,0,0,.1);
+        border-radius: .5rem;
+        
+    }
+    header .icons #menu-bars{
+       display: none;
+    }
+    header{
+        padding: 1rem .5rem;
+}
+
+@media(max-width:650px){
+    html{
+        font-size: 30%;
+        overflow-x: visible;
+        scroll-padding-top: 2rem;
+    } 
+    header .icons #menu-bars{
+        display: inline;
+        margin-left: 50rem;
+     }
+     .lifeecst .container img{
+         width: 100%;
+         height: auto;
+     }
+     header .navbar{
+        position: absolute;
+        left: 0;right: 0; top:100%;
+        background: #f7f7f7;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        border-top: 1rem solid #333;
+        transition: .2s linear;
+        border-bottom: 1rem solid #333;
+    }
+    header .navbar a{
+       display: flex;
+       width: 100%;
+       padding: 1.5rem;
+       margin: 1.5rem;
+       background: #fff;
+       border: .1 solid #333;
+       box-shadow: 0 .5rem 1rem #000000;
+       border-radius: .5rem;
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .home{
+        min-height: 30vh;
+        background-color: #fff;
+        background-size: cover;
+        background-position: fixed;
+        align-items: center;
+        margin-top: .1rem;
+        border: .1rem solid var(--green);
+        border-radius: .1rem;
+        display: inline;
+    }
+   
+}
+@media(max-width:400px){
+    html{
+        font-size: 30%;
+    } 
+    header .icons #menu-bars{
+        display: inline;
+        margin-left: 12rem;
+     }
+     header .navbar a{
+        display: flex;
+        width: 100%;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        background: #fff;
+        border: .1 solid #333;
+        box-shadow: 0 .5rem 1rem #000000;
+        border-radius: .5rem;
+     }
+     .lifeecst .container img{
+         width: 100%;
+         height: auto;
+     }
+    
+    .home{
+        min-height: 30vh;
+        background-color: #fff;
+        background-size: cover;
+        background-position: fixed;
+        align-items: center;
+        margin-top: .1rem;
+        border: .1rem solid var(--green);
+        border-radius: .1rem;
+        display: inline;
+    }
+}
+}
+}
+
